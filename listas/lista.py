@@ -1,0 +1,13 @@
+bike=["lala","lala2","lala3"]
+print(bike)
+print(bike[1])
+bike.insert(4,"a")
+print(bike)
+bike.insert(5,"c")
+print(bike)
+bike.insert(6,"b")
+print(bike)
+bike.append("ajkdhaiudqwiehjkzchiuzxuciadqiwe")
+print(bike)
+bike.sort()
+print(bike)
