@@ -81,4 +81,12 @@ for dimension in dimensions:
 dimensions = (400,100)
 print("dimensions modificada :")
 for dimension in dimensions:
-    print(dimension)   
+    print(dimension)
+
+ # Read an integer:
+a = input()
+cubo=[]
+for valor in range(1,int(a)+1):
+    cubo.append(valor**3)
+print(sum(cubo))
+      
