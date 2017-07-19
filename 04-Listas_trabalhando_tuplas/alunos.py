@@ -53,7 +53,7 @@ for aluno in alunos[:3]:
 cubos = [valor**3 for valor in range(1,9)]
 print(cubos)
 
-#copia lista sem slice
+#copia lista sem slice, aqui funciona como se estivesse trabalhando com ponteiros
 print("copy sem slice")
 cubos2=cubos
 print(cubos2)
@@ -64,11 +64,21 @@ print(cubos2)
 cubos.remove(7878)
 cubos.remove(199)
 
-#copia lista com slice
+#copia lista com slice, aqui a copia funciona normal, sem utilizacao de ponteiros 
 print("copy com slice")
 cubos2=cubos[:]
 print(cubos2)
 cubos2.append(5567)
 cubos.append(4365)
 print(cubos)
-print(cubos2)    
+print(cubos2) 
+
+# Tanto faz utilizar [] ou ()
+dimensions = [200,50]
+print("dimensions original :")
+for dimension in dimensions:
+    print(dimension)
+dimensions = (400,100)
+print("dimensions modificada :")
+for dimension in dimensions:
+    print(dimension)   
