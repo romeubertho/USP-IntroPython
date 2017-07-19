@@ -72,7 +72,7 @@ for alien in range(0, 30):
     new_alien.__setitem__("speed", "slow")
     aliens.append(new_alien)
     for x in range(0, 2):
-        for alien in aliens[int(x):3+int(x)]:
+        for alien in aliens[int(x):3 + int(x)]:
             if alien["color"] == "yellow":
                 alien.__setitem__("color", "red")
                 alien.__setitem__("points", "15")
@@ -81,7 +81,7 @@ for alien in range(0, 30):
                 alien.__setitem__("color", "yellow")
                 alien.__setitem__("points", "10")
                 alien.__setitem__("speed", "medium")
-            
+
 
 for alien in aliens[:10]:
     print(alien)
@@ -89,11 +89,31 @@ for alien in aliens[:10]:
 # Lista dentro de um diciionario
 
 pizza = {
-   'crust': 'thick',
-   'toppings': ['mushrooms', 'extra cheese'],
-   }
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
 print("You ordered a " + pizza['crust'] + "-crust pizza " +
-     "with the following toppings:")
+      "with the following toppings:")
 
 for topping in pizza['toppings']:
-   print("\t" + topping)  
+    print("\t" + topping)
+
+# Dicionario aninhado
+users = {'aeinstein': {'first': 'albert',
+                       'last': 'einstein',
+                       'location': 'princeton'},
+         'mcurie': {'first': 'marie',
+                    'last': 'curie',
+                    'location': 'paris'},
+         }
+
+# for gera lista de tupla onde cada elemento eh um par
+# o primeiro elemento do par eh uma string
+# o segundo elemento eh um dicionario
+for username, user_info in users.items():
+    print("\nUsername: " + username)
+    full_name = user_info['first'] + " " + user_info['last']
+    location = user_info['location']
+
+print("\tFull name: " + full_name.title())
+print("\tLocation: " + location.title())
