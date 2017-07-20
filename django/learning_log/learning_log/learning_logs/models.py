@@ -35,4 +35,4 @@ class Teste(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.teste2
+        return str(self.teste2)
