@@ -1,8 +1,3 @@
-''''
-MODELS PARECIDO COM O SAILS
-''''
-
-
 from django.db import models
 
 # Create your models here.
