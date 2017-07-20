@@ -1,11 +1,38 @@
 from django.db import models
 
 # Create your models here.
-class Topic(models.Model):
-	"""A topic the user is learning about"""
-	text = models.CharField(max_length=200)
-	date_added = models.DateTimeField(auto_now_add=True)
 
-	def __str__(self):
-		"""Return a string representation of the model."""
-		return self.text
+
+class Topic(models.Model):
+    """A topic the user is learning about"""
+    text = models.CharField(max_length=200)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'topico'
+
+    def __str__(self):
+        """Return a string representation of the model."""
+        return self.text
+
+
+class Entry(models.Model):
+    """Something specific learned about a topic"""
+    topic = models.ForeignKey(Topic)
+    text = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'entrada'
+
+    def __str__(self):
+        """Return a string representation of the model."""
+        return self.text[:50] + "..."
+
+class Teste(models.Model):
+    teste = models.TextField()
+    teste2 = models.DateTimeField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.teste2
