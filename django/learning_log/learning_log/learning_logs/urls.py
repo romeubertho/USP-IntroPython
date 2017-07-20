@@ -12,5 +12,7 @@ urlpatterns = [
     # Home page
     url(r'^$', views.index, name='index'),
     # Testeeeee
-    url(r'^teste$', views.teste, name='teste'),
+    url(r'^teste/$', views.teste, name='teste'),
+    # Exibir todos os topicos
+    url(r'^topics/$',views.topics,name='topics'),
 ]

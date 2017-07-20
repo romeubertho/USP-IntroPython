@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Tópicos</p>
+<ul>
+    {% for topic in topics %}
+        <li>{{ topic }}</li>
+    {% empty %}
+        <li>Você não adicionou nenhum tópico ainda.</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
