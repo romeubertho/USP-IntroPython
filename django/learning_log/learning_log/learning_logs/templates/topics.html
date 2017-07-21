@@ -3,9 +3,14 @@
 <p>Tópicos</p>
 <ul>
     {% for topic in topics %}
-        <li>{{ topic }}</li>
+        <li>
+<a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+</li>
     {% empty %}
         <li>Você não adicionou nenhum tópico ainda.</li>
     {% endfor %}
 </ul>
+
+<a href="{% url 'learning_logs:new_topic' %}">Adicionar novo tópico:</a>
+
 {% endblock content %}
